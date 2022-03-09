@@ -1,0 +1,29 @@
+<script defer src="/js/favourLogic.js"></script>
+
+<h1>Ваши избранные носки</h1>
+
+
+  <div class="container mb-5 mt-5" id="favour" data-sockid="{{favourSocks.sock_id}}">
+    <div class="row d-flex">
+      {{#each favourSocks}}
+      <div class="col-md-4">
+        <div class="favour_card mt-3">
+          <div class="sockscard product-1 align-items-center p-2 text-center" data-socksid="{{this.id}}" data-fav_sock_id="{{this.sock_id}}" id="{{this.sock_id}}" > <img src="/img/{{Sock.title}}.jpeg" width="200" height="300"> 
+            <h5>{{Sock.title}}</h5>
+            <div class="mt-3 info"> <span class="text1 d-block">{{Sock.color}}</span> <span
+                class="text1">{{Sock.pattern}}</span> </div>
+            <div class=" cost mt-3 text-dark"> <span>{{Sock.logo}}</span>
+              <div class=" star mt-3 align-items-center"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                  class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+            </div>
+          <input type="button" value="Добавить в корзину" tabindex="5"
+            class="add_tocart block add_button w-100 mar-t-4 mar-b-3 pad-2 round-1 text-c center no-border no-outline">
+          <input type="button" value="Удалить из избранного" tabindex="5"
+            class="delete_favour block del_button w-100 mar-t-4 mar-b-3 pad-2 round-1 text-c center no-border no-outline">
+
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>

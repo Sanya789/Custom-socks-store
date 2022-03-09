@@ -1,0 +1,68 @@
+<script defer src="/js/delCart.js"></script>
+<form action="/cart" method="POST">
+  <div class="container-fluid">
+    <div class="row">
+      <aside class="col-lg-9">
+        <div class="card">
+          <div class="table-responsive">
+            <table class="table table-borderless table-shopping-cart">
+              <thead class="text-muted">
+                <tr class="small text-uppercase">
+                  {{!-- <th scope="col">Вещь</th>
+                  <th scope="col" width="120">Количество</th>
+                  <th scope="col" width="120">Цена</th> --}}
+                  <th scope="col" class="text-right d-none d-md-block" width="200"></th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <div class="tabletka">
+                  {{#each socks}}
+                  <tr data-id="{{this.id}}">
+                    <td>
+                      <figure class="itemside align-items-center">
+                        <div class="aside"><img src="img/{{this.Sock.title}}.jpeg" class="img-sm"></div>
+
+                        <figcaption class="info"> <a href="#" class="title text-dark" data-abc="true">Модель
+                            {{this.Sock.title}}</a>
+                          <p class="text-muted small">Цена за одну пару: <br>{{this.Sock.price}}₽ </p>
+                        </figcaption>
+                      </figure>
+                    </td>
+                    {{!-- <td> <select class="form-control">
+                        <option>{{this.count}}</option>
+
+                      </select> </td> --}}
+                    {{!-- <td>
+                      <div class="price-wrap"> <var class="price">ЦЕНА ЗА КОЛ-ВО {{this.price}}</var> <small
+                          class="text-muted" style="">{{this.Sock.price}}₽</small> </div>
+                    </td> --}}
+                    <td class="text-right d-none d-md-block"> <a href="" class="btn btn-light" data-abc="true"><button
+                          id="deleteProfileBtn" type="button" style="color:black">Удалить</button></a> </td>
+                  </tr>
+
+                  {{/each}}
+                </div>
+
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </aside>
+      <aside class="col-lg-3">
+
+        <div class="card">
+          <div class="card-body">
+            <dl class="dlist-align">
+              <dt>Итого:</dt>
+              <dd class="text-right ml-3"></dd>
+            </dl>
+            <hr> <a href="#" class="btn btn-out btn-primary btn-square btn-main" data-abc="true"> Оформить </a> <a
+              href="/" class="btn btn-out btn-success btn-square btn-main mt-2" data-abc="true">Продолжить покупки</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</form>

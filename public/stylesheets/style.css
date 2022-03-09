@@ -1,0 +1,16 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+html {
+  height: 100%;
+  background-color: #39c0ca;
+  background: url(../images/diamond-bg.jpg);
+  background-attachment: fixed;
+  line-height: 1.4;
+}
+
+body {
+  height: 100%;
+}

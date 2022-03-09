@@ -1,0 +1,64 @@
+<script defer src="/js/index.js"></script>
+
+<div class="bg">
+  <div class="logo-container">
+    <img class="logo" src="/images/logo.png" class="center block">
+    <h1>Socks Shop</h1>
+  </div>
+  <div style="margin: 4px"><b>Цветные носки: носить - не сносить!</b>
+    Добро пожаловать в <b style="color: #05726d">Socks Shop</b> интернет-магазин цветных носков! Здесь вы можете
+    купить
+    модные цветные носки – мужские и
+    женские – носки для любого настроения, случая и гардероба. Полосатые носки, оригинальные носки, яркие и
+    необычные носки, прикольные носки с рисунком, носки в цветочек и носки в горошек. Цветные носки определяют
+    стиль. И их носят все, кто хочет выглядеть модно и необычно. В нашем интернет магазине есть носки на любой вкус,
+    цвет и размер.</div>
+</div>
+
+<br>
+<a href="/generatenewsocks" class="gradient-button generatenew"
+  style="width: 470px; display: flex; margin: auto">Сгенерировать свой
+  дизайн носков</a>
+<br>
+<br>
+
+<h2>Наши популярные модели:</h2>
+{{!-- {{#each socks}}
+<div class="card">
+  <h3 class="title" id="con">Модель {{this.title}}</h3>
+  <p class="picture" id="con"><img src="img/{{this.title}}.jpeg" width="200" height="300"></p>
+  <p class="price" id="con">Цена: {{this.price}}₽</p>
+</div>
+{{/each}} --}}
+
+{{!-- <form id="indexForm" action="/user/addtofavour" name="indexForm" method="post"> --}}
+  <div class="container mb-5 mt-5" id="favour" data-userid="{{req.session.userId}}">
+    <div class="row">
+      {{#each socks}}
+      <div class="col-md-4">
+        <div class="card mt-3">
+          <div class="product-1 align-items-center p-2 text-center sockscard" data-socksid="{{this.id}}">
+            <h5>Модель {{this.title}}</h5>
+
+            <p class="picture" id="con"><img src="img/{{this.title}}.jpeg" width="200" height="300"></p>
+            <p class="price" id="con" name="price" data-price="{{this.price}}">Цена: {{this.price}}₽</p>
+
+            <div class="mt-3 info"> <span class="text1 d-block">{{Sock.color}}</span> <span
+                class="text1">{{Sock.pattern}}</span> </div>
+            <div class=" cost mt-3 text-dark"> <span>{{Sock.logo}}</span>
+              <div class=" star mt-3 align-items-center"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                  class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+            </div>
+            <input type="button" value="Добавить в избранное" id="tofavour" tabindex="5" class="block add_button w-100 mar-t-4
+          mar-b-3 pad-2 round-1 text-c center no-border no-outline addtofavour">
+            <input type="button" value="Добавить в корзину" id="tocart" tabindex="5" class="block add_toc add_tocart w-100 mar-t-4
+          mar-b-3 pad-2 round-1 text-c center no-border no-outline addtocart">
+          </div>
+
+        </div>
+      </div>
+      {{/each}}
+      {{!--
+</form> --}}
+</div>
+</div>

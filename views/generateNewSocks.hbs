@@ -1,0 +1,39 @@
+<script defer src="/js/client.js"></script>
+
+<div style="width: 205px; margin: 0 auto; border: 3px solid #167e7e;" class="imgPathHtml" name="imgPathHtml"><img
+    src="img/100.jpeg" width="200" height="300">
+</div>
+
+<form action="/addSocks" class="selectorsForm" id="selectorsForm" name="selectorsForm" method="post">
+  <div class="selectors" id="selectors" name="selectors">
+    <div style="width: 270px; margin: 10px auto;"> Выберите цвет носков:
+      <select id="selectedColor" size="1" name="color">
+        <option selected value="white">Белый</option>
+        <option value="black">Чёрный</option>
+      </select>
+    </div>
+
+    <div style="width: 270px; margin: 10px auto;"> Выберите рисунок:
+      <select id="selectedLogo" size="1" name="logo">
+        <option selected value="nologo">Без рисунка</option>
+        <option value="logo1">Кола</option>
+        <option value="logo2">Авокадо</option>
+      </select>
+    </div>
+
+    <div style="width: 270px; margin: 10px auto;"> Выберите узор:
+      <select id="selectedPattern" size="1" name="pattern">
+        <option selected value="nopattern">Без узора</option>
+        <option value="pattern1">Синяя полоса</option>
+        <option value="pattern2">Красная полоса</option>
+      </select>
+    </div>
+  </div>
+
+  <input style="display:none" type="text" name="inptitle" id="inptitle">
+  <input style="display:none" type="text" name="inpprice" id="inpprice">
+
+  <div id="price" name="price" style="width: 270px; margin: 10px auto;"> Стоимость данной модели: 50₽</div>
+
+  <div><input id="saveBtn" name="saveBtn" style="display: flex; margin: auto" type="submit" value="Сохранить"></div>
+</form>
