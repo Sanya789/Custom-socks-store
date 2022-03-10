@@ -25,8 +25,6 @@
 </p>
 </details>
 
-## Требования
-
 ### Главная страница и разделы сайта
 
 ![1](https://user-images.githubusercontent.com/85242569/157451637-d5b330ec-c1ec-453a-9674-2c4397df1ed8.gif)
